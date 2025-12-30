@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hero Section | GreatFrontEnd Projects</title>
+    <title>Text Input Component | GreatFrontEnd Projects</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,6 +12,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind CDN allows you to use Tailwind classes immediately in your HTML without any installation steps. 
       If you're not using Tailwind, you may delete the <script> -->
@@ -25,9 +29,104 @@
   </head>
   <body>
     <!-- Add your site or application content here -->
-    <h1 class="text-5xl text-center font-semibold pt-20">
-      Hello world! Write your content here.
-    </h1>
+    <div class="py-28 px-[17.5px] flex flex-col gap-12">
+      <!-- Input fields -->
+      <div class="">
+        <label
+        for="email"
+        class="text-sm text-neutral-700 font-medium block mb-1.5">Email</label>
+        <div class="relative">
+          <input
+          required
+          id="email"
+          type="email"
+          placeholder="name@email.com"
+          class="placeholder:text-sm placeholder:text-neutral-500 bg-neutral-50 border border-neutral-200 rounded py-2.5 px-3.5 w-full
+          text-neutral-900 text-sm
+          focus:border-indigo-600 focus:outline focus:outline-indigo-200"
+          />
+          <div class="text-[16px] text-neutral-400
+          absolute right-3 top-[16%] cursor-pointer">
+            <i class="ri-question-line"></i>
+          </div>
+        </div>
+        <div class="mt-1.5 text-neutral-500 text-sm">This is a hint text.</div>
+      </div>
+
+      <!-- Input field with mail icon -->
+      <div class="">
+        <label
+        for="email-2"
+        class="text-sm text-neutral-700 font-medium block mb-1.5">Email</label>
+        <div class="relative">
+          <div class="text-xl text-neutral-400 absolute top-[16%] left-3.5">
+            <i class="ri-mail-line"></i>
+          </div>
+          <input
+          required
+          id="email-2"
+          type="email"
+          placeholder="name@email.com"
+          class="placeholder:text-sm placeholder:text-neutral-500 bg-neutral-50 border border-neutral-200 rounded py-2.5 px-[42px] w-full
+          text-neutral-900 text-sm
+          focus:border-indigo-600 focus:outline focus:outline-indigo-200"
+          />
+          <div class="text-[16px] text-neutral-400
+          absolute right-3 top-[16%] cursor-pointer">
+            <i class="ri-question-line"></i>
+          </div>
+        </div>
+        <div class="mt-1.5 text-neutral-500 text-sm">This is a hint text.</div>
+      </div>
+
+      <!-- Disabled input field -->
+      <div class="">
+        <label
+        for="email-3"
+        class="text-sm text-neutral-700 font-medium block mb-1.5">Email</label>
+        <div class="relative">
+          <input
+          required
+          disabled
+          id="email-3"
+          type="email"
+          placeholder="name@email.com"
+          class="placeholder:text-sm placeholder:text-neutral-500 bg-neutral-50 border border-neutral-200 rounded py-2.5 px-3.5 w-full
+          text-neutral-900 text-sm
+          focus:border-indigo-600 focus:outline focus:outline-indigo-200
+          disabled:cursor-not-allowed disabled:border-neutral-100 disabled:text-neutral-400 disabled:placeholder:text-neutral-400"
+          />
+          <div class="text-[16px] text-neutral-400
+          absolute right-3 top-[16%] cursor-pointer">
+            <i class="ri-question-line"></i>
+          </div>
+        </div>
+        <div class="mt-1.5 text-neutral-500 text-sm">This is a hint text.</div>
+      </div>
+
+      <!-- Input field with error message -->
+      <div class="">
+        <label
+        for="email-4"
+        class="text-sm text-neutral-700 font-medium block mb-1.5">Email</label>
+        <div class="relative">
+          <input
+          required
+          id="email-4"
+          type="email"
+          placeholder="name@email.com"
+          class="placeholder:text-sm placeholder:text-neutral-500 bg-neutral-50 border border-neutral-200 rounded py-2.5 px-3.5 w-full
+          text-neutral-900 text-sm
+          focus:border-indigo-600 focus:outline focus:outline-indigo-200"
+          />
+          <div class="text-[16px] text-red-600
+          absolute right-3 top-[16%] cursor-pointer">
+            <i class="ri-question-line"></i>
+          </div>
+        </div>
+        <div class="mt-1.5 text-sm text-red-600">This is an error message.</div>
+      </div>
+    </div>
 
     <!-- Attribute this challenge to yourself! -->
     <div class="credits">
@@ -38,7 +137,7 @@
         >GreatFrontEnd Projects</a
       >. Built by
       <a href="https://www.greatfrontend.com/u/your_username" target="_blank"
-        >Your Name</a
+        >Lamphrangmi</a
       >.
     </div>
     <script src="js/index.js"></script>
